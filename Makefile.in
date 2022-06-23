@@ -150,4 +150,7 @@ uninstall:
 test: craftos
 	./craftos --headless --script $(shell pwd)/resources/CraftOSTest.lua -d "$(shell mktemp -d)"
 
+flatpak: all
+	flatpak-builder .flatpak-build cc.MCJack123.craftos-pc.yml --force-clean
+
 .SILENT:

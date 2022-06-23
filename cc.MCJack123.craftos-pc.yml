@@ -1,0 +1,16 @@
+app-id: cc.MCJack123.craftos-pc
+runtime: org.freedesktop.Platform
+runtime-version: '21.08'
+sdk: org.freedesktop.Sdk
+command: craftos
+modules:
+  - name: CraftOS-PC
+    buildsystem: autotools
+    build-commands:
+      - install -D craftos /app/bin/craftos
+      - install -D craftos2-lua /usr/share/craftos
+    sources:
+      - type: file
+        path: craftos
+      - type: folder
+        path: craftos2-lua
